@@ -6,7 +6,7 @@
 }
 
 :root {
-  --hue: 170;
+  --hue: 410;
 
   --primary-color: hsl(var(--hue), 100%, 26%);
   --headline-color: hsl(210, 11%, 15%);
@@ -139,8 +139,12 @@ section .content p {
 }
 
 #navigation .logo path[fill*='#00856F'],
-#backToTopButton footer {
+#backToTopButton svg circle {
   fill: var(--primary-color);
+}
+
+#backToTopButton svg circle {
+  filter: brightness(1.3);
 }
 
 button.open-menu path[stroke*='#00856F'],
@@ -151,6 +155,11 @@ button.open-menu path[stroke*='#00856F'],
 body.menu-expanded #navigation .logo path,
 #navigation.scroll .logo path {
   fill: white;
+}
+
+body.menu-expanded #navigation .wrapper .logo span,
+body.menu-expanded #navigation .wrapper .logo {
+  color: white;
 }
 
 #navigation.scroll button.open-menu path[stroke*='#00856F'] {
@@ -177,8 +186,30 @@ nav .wrapper {
   justify-content: space-between;
 }
 
+nav .wrapper a {
+  text-decoration: none;
+}
+
+nav .wrapper .logo {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: var(--headline-color);
+}
+
+nav .wrapper .logo span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
 nav.scroll {
   background-color: var(--primary-color);
+}
+
+nav.scroll .logo,
+nav.scroll .logo span {
+  color: white;
 }
 
 nav button {
@@ -397,6 +428,10 @@ body.menu-expanded button patch {
   margin-bottom: 6rem;
 }
 
+#about img {
+  border-radius: 1.5rem;
+}
+
 /*======== CONTACT =============*/
 #contact {
   text-align: left;
@@ -420,6 +455,10 @@ body.menu-expanded button patch {
   gap: 0.8rem;
 }
 
+#contact img {
+  border-radius: 1.5rem;
+}
+
 /*======== FOOTER =============*/
 footer {
   background-color: var(--primary-color);
@@ -427,6 +466,22 @@ footer {
 
   text-align: left;
 
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+}
+footer .logo {
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+footer .logo span {
+  font-size: 3.5rem;
+  font-weight: 700;
   color: white;
 }
 
@@ -624,6 +679,24 @@ footer .social-links {
     border: none;
   }
 
+  nav#navigation a.logo {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: var(--headline-color);
+  }
+
+  nav#navigation a.logo span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  nav#navigation.scroll a.logo,
+  nav#navigation.scroll a.logo span {
+    color: white;
+  }
+
   /*======== HOME =============*/
   #home::before {
     height: calc(96% - var(--nav-height));
@@ -724,7 +797,7 @@ footer .social-links {
   footer {
     padding-block: 8rem;
   }
-  
+
   footer .wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'A B';
