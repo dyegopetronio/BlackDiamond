@@ -4,8 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlackDiamond</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" type="imagex/png" href="./assets/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link
+      rel="shortcut icon"
+      type="imagex/png"
+      href="./assets/icons/favicon.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +31,9 @@
             <li><a onclick="closeMenu()" href="#home">Início</a></li>
             <li><a onclick="closeMenu()" href="#services">Catálogo</a></li>
             <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+            <li>
+              <a onclick="closeMenu()" href="#testimonials">Depoimentos</a>
+            </li>
           </ul>
 
           <a onclick="closeMenu()" class="button" href="#contact"
@@ -202,7 +213,7 @@
         </div>
         <div class="col-b">
           <img
-            src="./assets/mulher-negra-com-moletom-verde-com-as-duas-maos-no-peito.png"
+            src="./assets/img/mulher-negra-com-moletom-verde-com-as-duas-maos-no-peito.png"
             alt="Mulher negra vestindo moletom verde com as duas mãos no peito e sorrindo"
           />
         </div>
@@ -406,9 +417,110 @@
         </div>
         <div class="col-b">
           <img
-            src="./assets/brincos-e-colar-sobre-um-livro-e-um-espelho.png"
+            src="./assets/img/brincos-e-colar-sobre-um-livro-e-um-espelho.png"
             alt="Par de brincos sobre um livro e um espelho"
           />
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="wrapper">
+        <header>
+          <h4>Depoimentos</h4>
+          <h2>O que os clientes dizem sobre a BlackDiamond</h2>
+        </header>
+        <div class="testimonials swiper">
+          <div class="swiper-wrapper">
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  eum aut molestias voluptatum. Enim ipsum fuga eum aut esse a
+                  assumenda.
+                </p>
+                <cite>
+                  <img
+                    src="./assets/profile-photos/wanessa-souza.jpg"
+                    alt="Foto de Wanessa Souza"
+                  />
+                  Wanessa Souza
+                </cite>
+              </blockquote>
+            </div>
+
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  eum aut molestias voluptatum. Enim ipsum fuga eum aut esse a
+                  assumenda.
+                </p>
+                <cite>
+                  <img
+                    src="./assets/profile-photos/paulo-coelho.jpg"
+                    alt="Foto de Paulo Coelho"
+                  />
+                  Paulo Coelho
+                </cite>
+              </blockquote>
+            </div>
+
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  eum aut molestias voluptatum. Enim ipsum fuga eum aut esse a
+                  assumenda.
+                </p>
+                <cite>
+                  <img
+                    src="./assets/profile-photos/miriam-silva.jpg"
+                    alt="Foto de Miriam Silva"
+                  />
+                  Miriam Silva
+                </cite>
+              </blockquote>
+            </div>
+
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <cite>
+                  <img
+                    src="./assets/profile-photos/francisco-beltrao.jpg"
+                    alt="Foto de Francisco Beltrão"
+                  />
+                  Francisco Beltrão
+                </cite>
+              </blockquote>
+            </div>
+
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  eum aut molestias voluptatum.
+                </p>
+                <cite>
+                  <img
+                    src="./assets/profile-photos/geralda-torres.jpg"
+                    alt="Foto de Geralda Torres"
+                  />
+                  Geralda Torres
+                </cite>
+              </blockquote>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -494,7 +606,7 @@
 
         <div class="col-b">
           <img
-            src="./assets/mulher-segurando-um-smartphone-sobre-um-laptop.png"
+            src="./assets/img/mulher-segurando-um-smartphone-sobre-um-laptop.png"
             alt="Mulher segurando um smartphone sobre um laptop"
           />
         </div>
@@ -624,6 +736,9 @@
 
     <!-- ScrollReveal Library-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./main.js"></script>
+    <!-- Swiper Library-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Main -->
+    <script src="./assets/scripts/main.js"></script>
   </body>
 </html>

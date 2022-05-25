@@ -9,6 +9,7 @@ function onScroll() {
   activateMenuAtCurrentSection(services)
   activateMenuAtCurrentSection(about)
   activateMenuAtCurrentSection(contact)
+  activateMenuAtCurrentSection(testimonials)
 }
 
 function activateMenuAtCurrentSection(section) {
@@ -73,6 +74,25 @@ ScrollReveal({
 #services,
 #services header,
 #services .card,
+#testimonials,
+#testimonials header,
+#testimonials .testimonials,
 #about,
 #about header,
 #about .content`)
+
+/* Testimonial carousel slider swiper */
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
+})
